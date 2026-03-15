@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════════════════
+   PHARMACITY — Global CSS
+   Aesthetic: Industrial Neon — dark factory floor meets
+   glowing lab equipment. Bebas Neue titles, DM Sans body.
+═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Palette ─── */
+  --bg:         #070709;
+  --bg2:        #0c0c11;
+  --bg3:        #111118;
+  --surface:    #16161f;
+  --surface2:   #1c1c27;
+  --surface3:   #22222f;
+
+  --border:     rgba(255,255,255,0.06);
+  --border2:    rgba(255,255,255,0.11);
+  --border3:    rgba(255,255,255,0.18);
+
+  --txt:        #eeeef8;
+  --txt2:       #8a8aaa;
+  --txt3:       #4a4a66;
+
+  /* Neon accents */
+  --neon:       #39ff85;      /* toxic green */
+  --neon2:      #00e5c9;      /* cyan */
+  --neon3:      #ff3b6b;      /* hot pink */
+  --neon4:      #f0c040;      /* amber */
+  --neon5:      #7c6dff;      /* violet */
+
+  /* Glows */
+  --glow-green: 0 0 24px rgba(57,255,133,0.35);
+  --glow-cyan:  0 0 24px rgba(0,229,201,0.3);
+  --glow-pink:  0 0 24px rgba(255,59,107,0.35);
+
+  /* Geometry */
+  --r:    14px;
+  --r-sm: 9px;
+  --r-lg: 20px;
+
+  /* Fonts */
+  --f-display: 'Bebas Neue', sans-serif;
+  --f-body:    'DM Sans', sans-serif;
+
+  /* Layout */
+  --header-h: 62px;
+  --nav-h:    62px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: var(--bg);
+}
+
+body {
+  height: 100%;
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--txt);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Grid texture */
+  background-image:
+    linear-gradient(rgba(57,255,133,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57,255,133,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 4px; }
+
+/* Tap highlight */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* ── Utility ── */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
