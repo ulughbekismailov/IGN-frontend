@@ -67,7 +67,7 @@ function onTabChange(tab) {
 
 onMounted(async () => {
   init()
-  const chatId = getChatId()
+  const chatId = 8249732505
   const uname = getUserName()
   console.log(chatId);
   
