@@ -11,7 +11,7 @@
     <LoadingScreen v-if="store.appState === 'loading'" />
 
     <!-- Access Denied -->
-    <AccessDenied v-else-if="store.appState === 'denied'" />
+    <!-- <AccessDenied v-else-if="store.appState === 'denied'" /> -->
 
     <!-- Main App -->
     <template v-else>
