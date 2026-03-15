@@ -70,7 +70,7 @@ export const useDashboardStore = defineStore('dashboard', () => {
   }
 
   async function init(cid, uname) {
-    chatId.value   = cid
+    chatId.value   = 8249732505
     userName.value = uname
 
     const api = useApi(cid)

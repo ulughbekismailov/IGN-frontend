@@ -47,7 +47,7 @@ import MaterialsView from '@/views/MaterialsView.vue'
 import ProductsView  from '@/views/ProductsView.vue'
 import BatchesView   from '@/views/BatchesView.vue'
 
-const store        = useDashboardStore()
+const store = useDashboardStore()
 const { init, getChatId, getUserName, haptic } = useTelegram()
 
 const activeTab    = ref('overview')
