@@ -79,6 +79,8 @@ export const useDashboardStore = defineStore('dashboard', () => {
     try {
       const { is_admin } = await api.checkAdmin(cid)
       if (!is_admin) { appState.value = 'denied'; return }
+      console.log("Salom", is_admin);
+      
       isAdmin.value = true
     } catch {
       appState.value = 'denied'

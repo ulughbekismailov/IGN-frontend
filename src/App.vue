@@ -65,14 +65,23 @@ function onTabChange(tab) {
   scrollEl.value?.scrollTo({ top: 0, behavior: 'instant' })
 }
 
-onMounted(() => {
+onMounted(async () => {
   init()
-  const chatId  = getChatId()
-  const uname   = getUserName()
-  if (!chatId) { store.appState = 'denied'; return }
-  store.init(chatId, uname)
+  const chatId = getChatId()
+  const uname = getUserName()
+  console.log(chatId);
+  
+  if (!chatId) { 
+    store.appState = 'denied'
+    return 
+  }
+  try {
+    await store.init(chatId, uname)
+  } catch (error) {
+    console.error('Init xatolik:', error)
+    store.appState = 'denied'
+  }
 })
-
 onUnmounted(() => store.destroy())
 </script>
 

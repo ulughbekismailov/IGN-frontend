@@ -14,7 +14,7 @@ async function get(path, params = {}) {
   Object.entries(params).forEach(([k, v]) => {
     if (v !== undefined && v !== null) url.searchParams.set(k, v)
   })
-  const res = await fetch(url.toString())
+  const res = await fetch(url)
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: res.statusText }))
     throw new Error(err.detail || `HTTP ${res.status}`)
